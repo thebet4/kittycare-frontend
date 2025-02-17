@@ -9,6 +9,8 @@ import {
 
 const baseURL = import.meta.env.VITE_BASE_API_URL || "http://localhost:3000";
 
+axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+
 const API = axios.create({
   baseURL: baseURL,
 });
